@@ -1,5 +1,7 @@
 #include <QCoreApplication>
 #include<QDebug>
+#include<QList>
+#include<QString>
 //定义学生信息类；(姓名：name，学号：number，课程1：course1，课程2：course2)
 class st_inf
  {
@@ -17,14 +19,7 @@ bool sort_name(st_inf s1,st_inf s2)
     else
         return 0;
 }
-//学号排序函数；
-bool sort_number(st_inf s1,st_inf s2)
-{
-    if (s1.number>s2.number)
-        return 1;
-    else
-        return 0;
-}
+
 //课程1排序函数；
 bool sort_course1(st_inf s1,st_inf s2)
 {
@@ -74,16 +69,7 @@ int main(int argc, char *argv[])
         qDebug()<<list.at(i).number<<"\t"<<list.at(i).name<<"\t"<<list.at(i).course1<<"\t"<<list.at(i).course2;
     }
     qDebug("---------");
-
-    std::sort(list.begin(),list.end(),sort_number);
-    qDebug("按学号排序输出");
-    qDebug()<<"  学号\t"<<"\t   姓名\t"<<"\t课程1"<<"\t课程2";
-    for(int i=0;i<4;i++)
-    {
-        qDebug()<<list.at(i).number<<"\t"<<list.at(i).name<<"\t"<<list.at(i).course1<<"\t"<<list.at(i).course2;
-    }
-    qDebug("---------");
-
+    
     std::sort(list.begin(),list.end(),sort_name);
     qDebug("按姓名排序输出");
     qDebug()<<"  学号\t"<<"\t   姓名\t"<<"\t课程1"<<"\t课程2";
