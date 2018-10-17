@@ -2,7 +2,6 @@
 #include <QVector>
 #include <QTextStream>
 #include <QFile>
-
 namespace SK {
 enum SortKind{
     col01    =   0x00000001<<0,         //!< 第1列
