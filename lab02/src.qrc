@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file alias="picture">src/jpg/360截图16380518163816.jpg</file>
-    </qresource>
-</RCC>
