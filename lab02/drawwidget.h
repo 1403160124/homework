@@ -35,8 +35,8 @@ public slots:
 void setStyle(int);
 void setWidth(int);
 void setColor(QColor);
-void clear();
-void picture();//添加
+void clear();   //清除
+void picture();//添加图片
 void save();//保存
 
 private :
