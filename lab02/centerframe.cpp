@@ -9,6 +9,8 @@
 #include <QGridLayout>
 #include <QLineEdit>
 #include <QDebug>
+#include<QFileDialog>
+
 
 CenterFrame::CenterFrame(QWidget *parent) : QFrame(parent)
 {

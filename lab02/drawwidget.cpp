@@ -4,7 +4,7 @@
 #include <QMessageBox>
 #include <QDateTime>
 #include<QFileDialog>
-
+#include<QString>
 
 DrawWidget::DrawWidget(QWidget *parent) : QWidget(parent)
 {
@@ -112,6 +112,7 @@ canDraw = true;
 {
     QImage iconImage;
     QString filename=QFileDialog::getOpenFileName(this,tr("选择图像"),"",tr("Images (*.png *.bmp *.jpg)"));
+    iconImage.load(filename);
     QPixmap *newPix = new QPixmap(size());
     *newPix=QPixmap(*this->pix);             //备份
     *pix = QPixmap::fromImage(iconImage.scaledToWidth(pix->size().width()*0.5 , Qt::FastTransformation));
